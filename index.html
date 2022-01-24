@@ -30,7 +30,7 @@
         <h1 class="text-white text-center">Programador Novato</h1>
     </div>
     <!-- menu-->
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="images/pn.jpg" width=30px;></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -41,10 +41,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="#habilidades">Habilidades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="#yo">Yo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -56,7 +59,7 @@
         </div>
     </nav>
     <!--Habilidades-->
-    <div class="container mt-3 text-center">
+    <div class="container mt-3 text-center" id="habilidades">
         <h1 class="text-center text-uppercase fst-italic fw-bold">Habilidades</h1>
         <div class="card d-inline-block" style="width: 18rem;">
             <img src="images/lenguajes/c++.png" class="card-img-top" alt="...">
@@ -114,8 +117,8 @@
         </div>
     </div>
     <!-- contenido-->
-    <div class="container mt-3">
-        <h1 class="text-center text-uppercase fst-italic fw-bold">Lorem ipsum dolor sit</h1>
+    <div class="container mt-3" id="yo">
+        <h1 class="text-center text-uppercase fst-italic fw-bold">Algo de mi</h1>
         <p class="bg-primary w-25 float-start p-3 me-2 d-none d-sm-block" style="text-align:justify">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis debitis, quibusdam incidunt eum
             necessitatibus excepturi iusto itaque unde delectus facere!
@@ -160,6 +163,9 @@
             ipsum voluptate provident consequuntur repudiandae necessitatibus nihil inventore sit in! Iusto, architecto
             quo!
         </p>
+    </div>
+    <div class="container p-2 text-center">
+        Copy right <a href="https://programadornovato.com" target="_blank" >ProgramadorNovato</a>
     </div>
     <!-- Detalle de habilidad Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
