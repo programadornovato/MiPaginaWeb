@@ -169,59 +169,50 @@
         <h1 class="text-center text-uppercase fst-italic fw-bold">Contacto</h1>
         <div class="row align-items-center">
             <div class="col-12 col-md-6 form-group">
-                <form>
+                <form class="needs-validation" novalidate>
                     <div class="row">
                         <div class="col-md-2"><label for="" >Nombre</label></div>
-                        <div class="col-md-10"><input type="text" class="form-control" placeholder="Ingresa tu Nombre" name="" id=""></div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Ingresa tu Nombre" name="nombre" required>
+                            <div class="invalid-feedback">Falta nombre</div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-2"><label for="">Email</label></div>
-                        <div class="col-md-10"><input type="email" class="form-control" placeholder="Ingresa tu Email" name="" id=""></div>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" placeholder="Ingresa tu Email" name="email" required>
+                            <div class="invalid-feedback">Email invalido</div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-2"><label for="">Proyecto</label></div>
                         <div class="col-md-10">
-                            <select class="form-select" multiple>
+                            <select class="form-select" multiple required>
                                 <option>Programacion</option>
-                                <option selected>Diseño web</option>
+                                <option>Diseño web</option>
                                 <option>DevPos</option>
                                 <option>Marketing</option>
                             </select>
+                            <div class="invalid-feedback">Seleccione un proyecto</div>
                         </div>
                     </div>
-                    <!--
                     <div class="row">
                         <div class="col-md-2"><label for="">Pago</label></div>
                         <div class="col-md-10">
                             <div class="form-check form-switch">
                                 <label for="Transferencia" class="form-check-label">Transferencia</label>
-                                <input type="checkbox" id="Transferencia"  class="form-check-input">
+                                <input type="radio" id="Transferencia" name="pago"  class="form-check-input" required>
+                                <div class="invalid-feedback">Seleccione un tipo de pago</div>
                             </div>
                             <div class="form-check form-switch">
                                 <label for="Paypal" class="form-check-label">Paypal</label>
-                                <input type="checkbox" checked id="Paypal"  class="form-check-input">
+                                <input type="radio" id="Paypal" name="pago"  class="form-check-input" required>
+                                <div class="invalid-feedback">Seleccione un tipo de pago</div>
                             </div>
                             <div class="form-check form-switch">
                                 <label for="Bitcoin" class="form-check-label">Bitcoin</label>
-                                <input type="checkbox" disabled id="Bitcoin"  class="form-check-input">
-                            </div>
-                        </div>
-                    </div>
-                    -->
-                    <div class="row">
-                        <div class="col-md-2"><label for="">Pago</label></div>
-                        <div class="col-md-10">
-                            <div class="form-check form-switch">
-                                <label for="Transferencia" class="form-check-label">Transferencia</label>
-                                <input type="radio" id="Transferencia" name="pago"  class="form-check-input">
-                            </div>
-                            <div class="form-check form-switch">
-                                <label for="Paypal" class="form-check-label">Paypal</label>
-                                <input type="radio" checked id="Paypal" name="pago"  class="form-check-input">
-                            </div>
-                            <div class="form-check form-switch">
-                                <label for="Bitcoin" class="form-check-label">Bitcoin</label>
-                                <input type="radio" id="Bitcoin" name="pago"  class="form-check-input">
+                                <input type="radio" id="Bitcoin" name="pago"  class="form-check-input" required>
+                                <div class="invalid-feedback">Seleccione un tipo de pago</div>
                             </div>
                         </div>
                     </div>
@@ -294,7 +285,27 @@
         crossorigin="anonymous"></script>
         <script>
             var bitcoin=document.getElementById("Bitcoin");
-            bitcoin.indeterminate=true
+            bitcoin.indeterminate=true;
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+                })
+            })()
         </script>
 </body>
 
