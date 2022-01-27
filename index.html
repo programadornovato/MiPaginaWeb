@@ -189,6 +189,43 @@
                             </select>
                         </div>
                     </div>
+                    <!--
+                    <div class="row">
+                        <div class="col-md-2"><label for="">Pago</label></div>
+                        <div class="col-md-10">
+                            <div class="form-check form-switch">
+                                <label for="Transferencia" class="form-check-label">Transferencia</label>
+                                <input type="checkbox" id="Transferencia"  class="form-check-input">
+                            </div>
+                            <div class="form-check form-switch">
+                                <label for="Paypal" class="form-check-label">Paypal</label>
+                                <input type="checkbox" checked id="Paypal"  class="form-check-input">
+                            </div>
+                            <div class="form-check form-switch">
+                                <label for="Bitcoin" class="form-check-label">Bitcoin</label>
+                                <input type="checkbox" disabled id="Bitcoin"  class="form-check-input">
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                    <div class="row">
+                        <div class="col-md-2"><label for="">Pago</label></div>
+                        <div class="col-md-10">
+                            <div class="form-check form-switch">
+                                <label for="Transferencia" class="form-check-label">Transferencia</label>
+                                <input type="radio" id="Transferencia" name="pago"  class="form-check-input">
+                            </div>
+                            <div class="form-check form-switch">
+                                <label for="Paypal" class="form-check-label">Paypal</label>
+                                <input type="radio" checked id="Paypal" name="pago"  class="form-check-input">
+                            </div>
+                            <div class="form-check form-switch">
+                                <label for="Bitcoin" class="form-check-label">Bitcoin</label>
+                                <input type="radio" id="Bitcoin" name="pago"  class="form-check-input">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row mt-3">
                         <div class="col-9"></div>
                         <div class="col-3">
@@ -255,6 +292,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
+        <script>
+            var bitcoin=document.getElementById("Bitcoin");
+            bitcoin.indeterminate=true
+        </script>
 </body>
 
 </html>
